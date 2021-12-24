@@ -18,8 +18,8 @@ public class Sheep : MonoBehaviour
     public KeyCode keyJump = KeyCode.Space;
     public LayerMask canJumpLayer;
     [Header("動畫參數:走路與跳躍")]
-    public string parameterWalk = "開關走路";
-    public string parameterJump = "開關跳躍";
+    public string parameterWalk = "走路開關";
+    public string parameterJump = "跳躍開關";
 
     #endregion
 
