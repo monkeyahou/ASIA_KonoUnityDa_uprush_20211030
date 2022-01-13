@@ -17,6 +17,8 @@ public class HurtSystem : MonoBehaviour
     [Header("¦º¤`¨Æ¥ó")]
     public UnityEvent onDead;
 
+   
+
     private float hpMax;
     private Animator ani;
 
@@ -35,7 +37,8 @@ public class HurtSystem : MonoBehaviour
     {
         hp -= damage;
         imgHPBar.fillAmount = hp / hpMax;
-        if (hp <= 0) Dead();
+        if (hp <= 0 ) Dead();
+        
     }
 
     private void Dead()

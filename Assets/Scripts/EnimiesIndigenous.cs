@@ -13,7 +13,7 @@ public class EnimiesIndigenous : MonoBehaviour
     [Header("目標圖層")]
     public LayerMask layerTarget;
     [Header("動畫參數")]
-    public string parameterWalk = "走路開關";
+    public string parameterWalk = "開關走路";
     public string parameterAttack = "觸發攻擊";
     [Header("面向目標物件")]
     public Transform target;
@@ -99,7 +99,7 @@ public class EnimiesIndigenous : MonoBehaviour
 
         // 距離 = 三維向量.距離(A點，B點)
         float distance = Vector3.Distance(target.position, transform.position);
-        print("與目標的距離 : " + distance);
+        // print("與目標的距離 : " + distance);
 
         if (distance <= attackDistance)       // 如果 距離 小於等於 攻擊距離
         {

@@ -21,6 +21,8 @@ public class Sheep : MonoBehaviour
     public string parameterWalk = "走路開關";
     public string parameterJump = "跳躍開關";
 
+    public float height;
+
     #endregion
 
     #region 欄位:私人
@@ -151,6 +153,15 @@ public class Sheep : MonoBehaviour
             // 剛體.添加推力(二維向量)
             A.AddForce(new Vector2(0, jump));
 
+        }
+    }
+
+    public void OutLine()
+    {
+        height = GameObject.Find("主角-咩咩").transform.position.y;
+        if (height < -10)
+        {
+            print("out");
         }
     }
 
