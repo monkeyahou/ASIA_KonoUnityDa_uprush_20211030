@@ -32,13 +32,19 @@ public class HurtSystem : MonoBehaviour
     /// <summary>
     /// 受傷
     /// </summary>
-    /// <param name="damage">接收到的傷害</param>
+    /// <param name = "damage" >接收到的傷害</param>
     public void Hurt(float damage)
     {
         hp -= damage;
         imgHPBar.fillAmount = hp / hpMax;
         if (hp <= 0 ) Dead();
         
+    }
+
+    public void Recover(float recover)
+    {
+        hp += recover;
+        imgHPBar.fillAmount = hp / hpMax;
     }
 
     private void Dead()
